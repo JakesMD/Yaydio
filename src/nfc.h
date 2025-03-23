@@ -13,7 +13,7 @@ class YNFC {
    public:
     YNFC(byte irqPin, byte resetPin) : _nfc(irqPin, resetPin) {};
 
-    void begin() { _nfc.begin(); }
+    bool begin() { return _nfc.begin(); }
 
     YNFCResult read() {
         delay(1000);

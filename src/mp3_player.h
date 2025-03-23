@@ -6,11 +6,13 @@ class YMP3Player {
    public:
     YMP3Player(byte rxPin, byte txPin) : _serial(rxPin, txPin), _player(&_serial) {}
 
-    void begin() {
+    bool begin() {
         _player.begin();
         _player.setVolume(15);
         _player.setCycleMode(DY::play_mode_t::RepeatDir);
         _player.stop();
+
+        return !(_player.checkPlayState() == DY::play_state_t::Fail);
     }
 
     void playAlbum(uint16_t album) {
@@ -57,7 +59,7 @@ class YMP3Player {
 
     uint16_t currentTrack() { return _player.getPlayingSound() - _firstTrackInAlbum + 1; }
 
-   private:
+      private:
     SoftwareSerial _serial;
     DY::Player _player;
     uint16_t _firstTrackInAlbum;

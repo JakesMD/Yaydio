@@ -8,6 +8,8 @@
 #include "nfc.h"
 #include "rotary_encoder.h"
 
+YButton cardBtn(CARD_BTN_PIN);
+
 YButton leftBtn(LEFT_BTN_PIN);
 YButton rightBtn(RIGHT_BTN_PIN);
 
@@ -55,11 +57,14 @@ void setup() {
     Serial.begin(115200);
     Serial.println("Hi!");
 
-    nfc.begin();
-    mp3Player.begin();
+    if (!nfc.begin() || !mp3Player.begin()) {
+        display.showFail();
+        while (true);
+    }
 }
 
 void loop() {
+    cardBtn.loop();
     leftBtn.loop();
     rightBtn.loop();
     leftRotaryEncoder.loop();
@@ -73,17 +78,7 @@ void loop() {
                 mp3Player.stop();
                 display.showHi();
             }
-            switch (nfc.read()) {
-                case NO_CARD:
-                    break;
-                case SUCCESS:
-                    selectedAlbum = nfc.album();
-                    changeMode(selectedAlbum == 0 ? NO_ALBUM_MODE : PLAYER_MODE);
-                    break;
-                case FAIL:
-                    changeMode(FAIL_MODE);
-                    break;
-            }
+            if (cardBtn.isPressed()) changeMode(READ_CARD_MODE);
             break;
 
         case READ_CARD_MODE:
@@ -106,9 +101,7 @@ void loop() {
             break;
 
         case WRITE_CARD_MODE:
-            if (hasModeChanged) {
-                display.showLoading();
-            }
+            if (hasModeChanged) display.showLoading();
             switch (nfc.setAlbum(selectedAlbum)) {
                 case NO_CARD:
                     changeMode(NO_CARD_MODE);
@@ -128,6 +121,11 @@ void loop() {
                 updateTrackScreen();
             }
 
+            if (cardBtn.isReleased()) {
+                changeMode(NO_CARD_MODE);
+                break;
+            }
+
             if (leftBtn.justReleased()) {
                 mp3Player.togglePlayback();
                 updateTrackScreen();
@@ -135,10 +133,12 @@ void loop() {
 
             if (rightBtn.justReleased()) {
                 changeMode(READ_CARD_MODE);
+                break;
             }
 
             if (leftBtn.isPressed() && rightBtn.isPressed()) {
                 changeMode(SET_ALBUM_MODE);
+                break;
             }
 
             if (leftRotaryEncoder.justTurnedCW()) {
@@ -155,9 +155,8 @@ void loop() {
                 updateTrackScreen();
             }
 
-            if (currentMillis - lastUpdate > 1000) {
-                updateTrackScreen();
-            }
+            if (currentMillis - lastUpdate > 1000) updateTrackScreen();
+
             break;
 
         case SET_ALBUM_MODE:
@@ -166,6 +165,11 @@ void loop() {
                 wasRightBtnReleased = false;
                 if (selectedAlbum == 0) selectedAlbum = 1;
                 display.showAlbum(selectedAlbum);
+            }
+
+            if (cardBtn.isReleased()) {
+                changeMode(NO_CARD_MODE);
+                break;
             }
 
             if (rightBtn.justReleased()) {
@@ -190,11 +194,17 @@ void loop() {
                 mp3Player.stop();
                 display.showBlank();
             }
+            if (cardBtn.isReleased()) {
+                changeMode(NO_CARD_MODE);
+                break;
+            }
             if (leftBtn.isPressed() && rightBtn.isPressed()) {
                 changeMode(SET_ALBUM_MODE);
+                break;
             }
             if (rightBtn.justReleased()) {
                 changeMode(READ_CARD_MODE);
+                break;
             }
             break;
 

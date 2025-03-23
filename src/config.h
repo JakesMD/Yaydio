@@ -1,4 +1,7 @@
 
+// Card contact switch
+#define CARD_BTN_PIN 1
+
 // Display
 #define DISP_CLK_PIN 10
 #define DISP_DIO_PIN 11
