@@ -107,7 +107,11 @@ void loop() {
                     changeMode(NO_CARD_MODE);
                     break;
                 case SUCCESS:
-                    changeMode(PLAYER_MODE);
+                    if (selectedAlbum == 0) {
+                        changeMode(NO_ALBUM_MODE);
+                    } else {
+                        changeMode(PLAYER_MODE);
+                    }
                     break;
                 case FAIL:
                     changeMode(FAIL_MODE);
@@ -182,7 +186,7 @@ void loop() {
             } else if (selectedAlbum < 9999 && rightRotaryEncoder.justTurnedCW()) {
                 selectedAlbum++;
                 display.showAlbum(selectedAlbum);
-            } else if (selectedAlbum > 1 && rightRotaryEncoder.justTurnedCCW()) {
+            } else if (selectedAlbum > 0 && rightRotaryEncoder.justTurnedCCW()) {
                 selectedAlbum--;
                 display.showAlbum(selectedAlbum);
             }
