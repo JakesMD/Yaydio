@@ -1,15 +1,39 @@
-# Yaydio
-
-## Limitations
-
-- Supports MP3 format only.
-- Max 999 songs per album.
-- Max 9999 albums.
-- Max 65535 songs in total.
-- Max 32 GB SD card.
+# Yaydio! 📻
+NO MORE SCRATCHED CDS! Yaydio is a portable music player designed for kids, ditching the hassle of CDs in favor of easy-to-use keycards.
 
 
-## Adding Albums to the SD Card
+## ✨ Features
+- **Keycard playback:** Insert a keycard to instantly play an album.
+- **Simple controls:** Play/pause, next/previous track, volume up/down.
+- **Audio options:** Built-in speaker or connect headphones via the 3.5mm jack.
+- **High capacity:**
+    - Up to 999 songs per album
+    - Up to 9999 albums
+    - Up to 65535 songs in total
+    - Supports micro SD cards up to 32GB.
+- **MP3 compatibility:** Plays all your favorite MP3 files.
+- **Affordable & accessible:** Works with cost-effective MF S50 RFID keycards.
+
+
+## 🕹️ Usage
+
+### Play / pause
+Inserting a keycard into the Yaydio will automatically start the playback.
+
+Press the left knob to pause or resume the playback.
+
+Remove the keycard to stop the playback.
+
+
+### Volume control
+Turn the left knob to increase or decrease the volume.
+
+
+### Next / previous track
+Turn the right knob to skip to the next or previous track.
+
+
+### Add albums to the SD card
 
 1.  If you haven't already, format the SD card to FAT16 or FAT32 and name it `YAYDIO`.
 2.  Create a new folder named `0001`, where "1" represents the next album number.
@@ -19,15 +43,17 @@
 6.  Use [DriveSort](https://www.anerty.net/software/file/DriveSort/?lang=en) (Windows) or [FatDriveSorter](https://fat-drive-sorter.netlify.app) (macOS) to sort the files alphabetically in the SD card's table.
 
 
-## Assigning an Album to an NFC Card
+### Assign an album to a keycard
 
-1. Insert the NFC card into the Yaydio.
+1. Insert the keycard into the Yaydio.
 2. Press the left and right knobs simultaneously.
 3. Turn the right knob to select the album number.
-4. Press the right knob to write the album number to the NFC card.
+4. Press the right knob to write the album number to the keycard.
 
 
-## Wiring
+## 🔨 Make your own
+
+### 🧵 Wiring
 
 ![Wiring Diagram](images/wiring_diagram.png)
 
@@ -82,7 +108,7 @@
 | Speaker -             | -            |
 
 
-## Assembly
+### 🏗️ Assembly
 
 [yaydio.step](yaydio.step) contains the models of the 3D-printed parts.
 
