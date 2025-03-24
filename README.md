@@ -25,3 +25,54 @@
 2. Press the left and right knobs simultaneously.
 3. Turn the right knob to select the album number.
 4. Press the right knob to write the album number to the NFC card.
+
+
+## Wiring
+
+| Left Rotary Encoder | Arduino Nano |
+| ------------------- | ------------ |
+| SW                  | D2           |
+| SW GND              | GND          |
+| DT                  | D3           |
+| CLK                 | D4           |
+| GND                 | GND          |
+
+| Right Rotary Encoder | Arduino Nano |
+| -------------------- | ------------ |
+| SW                   | D5           |
+| SW GND               | GND          |
+| DT                   | D6           |
+| CLK                  | D7           |
+| GND                  | GND          |
+
+| 4-Digit 7-Segment 0.36 Inch TM1637 | Arduino Nano |
+| ---------------------------------- | ------------ |
+| CLK                                | D10          |
+| DIO                                | D11          |
+| GND                                | GND          |
+| 5V                                 | 5V           |
+
+| Card Switch | Arduino Nano |
+| ----------- | ------------ |
+| NO          | A3           |
+| COM         | GND          |
+
+| PN532 NFC Module V3 | Arduino Nano |
+| ------------------- | ------------ |
+| GND                 | GND          |
+| VCC                 | VIN (NOT 5V) |
+| SDA                 | A4           |
+| SCL                 | A5           |
+| RSTPDN              | D9           |
+
+| DY-SV5W Voice Module  | Arduino Nano |
+| --------------------- | ------------ |
+| -                     | GND          |
+| +                     | 5V           |
+| TXD                   | D12          |
+| RXD                   | D13          |
+
+| DY-SV5W Voice Module  | Speaker      |
+| --------------------- | ------------ |
+| Speaker +             | +            |
+| Speaker -             | -            |
