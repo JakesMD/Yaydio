@@ -29,6 +29,8 @@
 
 ## Wiring
 
+![Wiring Diagram](wiring_diagram.png)
+
 | Left Rotary Encoder | Arduino Nano |
 | ------------------- | ------------ |
 | SW                  | D2           |
@@ -64,6 +66,7 @@
 | SDA                 | A4           |
 | SCL                 | A5           |
 | RSTPDN              | D9           |
+| Switches: ON, OFF (I2C mode)       |
 
 | DY-SV5W Voice Module  | Arduino Nano |
 | --------------------- | ------------ |
@@ -71,6 +74,7 @@
 | +                     | 5V           |
 | TXD                   | D12          |
 | RXD                   | D13          |
+| Switches: OFF, OFF, ON (UART mode)   |
 
 | DY-SV5W Voice Module  | Speaker      |
 | --------------------- | ------------ |
