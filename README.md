@@ -29,7 +29,7 @@
 
 ## Wiring
 
-![Wiring Diagram](wiring_diagram.png)
+![Wiring Diagram](images/wiring_diagram.png)
 
 | Left Rotary Encoder | Arduino Nano |
 | ------------------- | ------------ |
@@ -80,3 +80,22 @@
 | --------------------- | ------------ |
 | Speaker +             | +            |
 | Speaker -             | -            |
+
+
+## Assembly
+
+[yaydio.step](yaydio.step) contains the models of the 3D-printed parts.
+
+**Printer:** Bambu Lab A1 with AMS
+
+**Nozzle:** 0.4mm
+
+**Preset:** `0.20mm Standard @BBL A1` with supports enabled
+
+**Filaments:**
+- Bambu Lab PLA Matte Mandarin Orange (11300)
+- Bambu Lab PLA Matte Marine Blue (11600)
+- Bambu Lab PLA Matte Dark Blue (11602)
+
+![Inside view 1](images/inside_view_1.jpg)
+![Inside view 2](images/inside_view_2.jpg)
