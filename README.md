@@ -16,7 +16,7 @@
 3.  Copy the album's songs into the folder you created.
 4.  Rename the first song of the album to `001.mp3`.
 5.  Repeat steps 2-4 for each album.
-6.  Use [DriveSort](https://www.anerty.net/software/file/DriveSort/?lang=en) (Windows) or [FatDriveSorter](https://fat-drive-sorter.netlify.app) (macOS) to sort the files alphabetically in the SD card's directory.
+6.  Use [DriveSort](https://www.anerty.net/software/file/DriveSort/?lang=en) (Windows) or [FatDriveSorter](https://fat-drive-sorter.netlify.app) (macOS) to sort the files alphabetically in the SD card's table.
 
 
 ## Assigning an Album to an NFC Card
