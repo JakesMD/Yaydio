@@ -1,5 +1,7 @@
 # Yaydio! 📻
-NO MORE SCRATCHED CDS! Yaydio is a portable music player designed for kids, ditching the hassle of CDs in favor of easy-to-use keycards.
+**No more scratched CDs!**
+
+**Yaydio!** is a portable music player designed for kids, ditching the hassle of CDs in favor of easy-to-use keycards.
 
 
 ## ✨ Features
@@ -18,7 +20,7 @@ NO MORE SCRATCHED CDS! Yaydio is a portable music player designed for kids, ditc
 ## 🕹️ Usage
 
 ### Play / pause
-Inserting a keycard into the Yaydio will automatically start the playback.
+Inserting a keycard into the **Yaydio!** will automatically start the playback.
 
 Press the left knob to pause or resume the playback.
 
@@ -45,7 +47,7 @@ Turn the right knob to skip to the next or previous track.
 
 ### Assign an album to a keycard
 
-1. Insert the keycard into the Yaydio.
+1. Insert the keycard into the **Yaydio!**.
 2. Press the left and right knobs simultaneously.
 3. Turn the right knob to select the album number.
 4. Press the right knob to write the album number to the keycard.
