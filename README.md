@@ -1,3 +1,5 @@
+![Yaydio!](images/yaydio.jpg)
+
 # Yaydio! 📻
 **No more scratched CDs!**
 
