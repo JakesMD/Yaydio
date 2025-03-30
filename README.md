@@ -40,11 +40,12 @@ Turn the right knob to skip to the next or previous track.
 ### Add albums to the SD card
 
 1.  If you haven't already, format the SD card to FAT16 or FAT32 and name it `YAYDIO`.
-2.  Create a new folder named `0001`, where "1" represents the next album number.
-3.  Copy the album's songs into the folder you created.
-4.  Rename the first song of the album to `001.mp3`.
-5.  Repeat steps 2-4 for each album.
-6.  Use [DriveSort](https://www.anerty.net/software/file/DriveSort/?lang=en) (Windows) or [FatDriveSorter](https://fat-drive-sorter.netlify.app) (macOS) to sort the files alphabetically in the SD card's table.
+2.  Copy the 'README.txt' file onto the SD card.
+3.  Create a new folder named `0001`, where "1" represents the next album number.
+4.  Copy the album's songs into the folder you created.
+5.  Rename the first song of the album to `001.mp3`.
+6.  Repeat steps 2-4 for each album.
+7.  Use [DriveSort](https://www.anerty.net/software/file/DriveSort/?lang=en) (Windows) or [FatDriveSorter](https://fat-drive-sorter.netlify.app) (macOS) to sort the files alphabetically in the SD card's table.
 
 
 ### Assign an album to a keycard
