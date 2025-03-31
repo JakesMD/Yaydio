@@ -37,15 +37,25 @@ Turn the left knob to increase or decrease the volume.
 Turn the right knob to skip to the next or previous track.
 
 
-### Add albums to the SD card
+### Setup
+1. Format the SD card to FAT16 or FAT32 and name it `YAYDIO`.
+2. Copy the `README.txt` file onto the SD card.
+3. Windows only: Download [DriveSort](https://www.anerty.net/software/file/DriveSort/?lang=en) and copy `DriveSort.exe` onto the SD card.
+4. macOS only: Download [FatDriveSorter](https://fat-drive-sorter.netlify.app) and copy `FatDriveSorter.app` onto the SD card.
 
-1.  If you haven't already, format the SD card to FAT16 or FAT32 and name it `YAYDIO`.
-2.  Copy the 'README.txt' file onto the SD card.
-3.  Create a new folder named `0001`, where "1" represents the next album number.
-4.  Copy the album's songs into the folder you created.
-5.  Rename the first song of the album to `001.mp3`.
-6.  Repeat steps 2-4 for each album.
-7.  Use [DriveSort](https://www.anerty.net/software/file/DriveSort/?lang=en) (Windows) or [FatDriveSorter](https://fat-drive-sorter.netlify.app) (macOS) to sort the files alphabetically in the SD card's table.
+
+### Add albums to the SD card
+1.  Create a new folder named `0001`, where "1" represents the next album number.
+2.  Copy the album's songs into the folder you created.
+3.  Rename the first song of the album to `001.mp3`.
+4.  Repeat steps 1-3 for each album.
+5.  Windows only: Use `DriveSort` to sort the files alphabetically in the SD card's table.
+    -   Sort by `long name` and `ascending`.
+    -   Remember to press the save button.
+    -   You may need to sort every new folder individually and press save after each one.
+6.  macOS only: Use `FatDriveSorter` to sort the files alphabetically in the SD card's table.
+    -   Next to `Order:` select `Directories first`.
+    -   Tick the box next to `Case-sensitive:`.
 
 
 ### Assign an album to a keycard
