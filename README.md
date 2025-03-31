@@ -68,6 +68,9 @@ Turn the right knob to skip to the next or previous track.
 
 ## 🔨 Make your own
 
+### 🧱 Parts
+For a list of parts see [this issue](https://github.com/JakesMD/Yaydio/issues/1).
+
 ### 🧵 Wiring
 
 ![Wiring Diagram](images/wiring_diagram.png)
