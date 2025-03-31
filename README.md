@@ -112,6 +112,8 @@ For a list of parts see [this issue](https://github.com/JakesMD/Yaydio/issues/1)
 | RSTPDN              | D9           |
 | Switches: ON, OFF (I2C mode)       |
 
+Note: In the images below you'll see that I also connected the IRQ pin to the Arduino. This is not required.
+
 | DY-SV5W Voice Module  | Arduino Nano |
 | --------------------- | ------------ |
 | -                     | GND          |
