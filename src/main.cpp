@@ -130,14 +130,9 @@ void loop() {
                 break;
             }
 
-            if (leftBtn.justReleased()) {
+            if (leftBtn.justReleased() || rightBtn.justReleased()) {
                 mp3Player.togglePlayback();
                 updateTrackScreen();
-            }
-
-            if (rightBtn.justReleased()) {
-                changeMode(READ_CARD_MODE);
-                break;
             }
 
             if (leftBtn.isPressed() && rightBtn.isPressed()) {

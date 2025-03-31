@@ -24,7 +24,7 @@
 ### Play / pause
 Inserting a keycard into the **Yaydio!** will automatically start the playback.
 
-Press the left knob to pause or resume the playback.
+Press either knob to pause or resume the playback.
 
 Remove the keycard to stop the playback.
 
