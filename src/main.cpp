@@ -53,11 +53,22 @@ void changeMode(YMODE newMode) {
     isNewModeComing = true;
 }
 
+bool tryInitializePeripherals(int attempts = 5) {
+    for (int i = 0; i < attempts; ++i) {
+        if (nfc.begin() && mp3Player.begin()) {
+            return true;
+        }
+        Serial.println("delay 500ms");
+        delay(500);
+    }
+    return false;
+}
+
 void setup() {
     Serial.begin(115200);
     Serial.println("Hi!");
 
-    if (!nfc.begin() || !mp3Player.begin()) {
+    if (!tryInitializePeripherals()) {
         display.showFail();
         while (true);
     }
